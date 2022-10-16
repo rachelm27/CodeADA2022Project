@@ -1,0 +1,171 @@
+<html>
+    <head>
+      <link href='https://fonts.googleapis.com/css?family=Nanum Pen Script' rel='stylesheet'>
+      <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>Super SAVE Chicago!</title>
+      <link href="style.css" rel="stylesheet"/>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <h1>Transportation Around Chicago</h2>
+        <h3>Which do you choose?</h3>
+        <h4>In the scenarios below, your home is in the Chicago suburbs,
+            and most of the places you are going are in the heart of the city.
+            The closer you are to the most environmentally friendly problem, the more points you get.
+        </h4>
+    </head>
+
+    <script>
+      var totPoints = 0;
+      var pointsPerQ = 0;
+      function evaluateQuestion1() {
+        var selected = document.getElementById("idToPlace1").value;
+        if (selected == "train") {
+          totPoints += 3;
+          pointsPerQ = 3;
+        } else if (selected == "car") {
+          totPoints += 1;
+          pointsPerQ = 1;
+        } else if (selected == "carpool") {
+          totPoints += 2;
+          pointsPerQ = 2;
+        } else if (selected == "bike") {
+          totPoints += 0;
+          pointsPerQ = 0;
+        }
+        idQuestion1.innerHTML = "You have earned " + pointsPerQ + " points.";
+      }
+      function evaluateQuestion2() {
+        var selected = document.getElementById("idToPlace2").value;
+        if (selected == "train") {
+          totPoints += 1;
+          pointsPerQ = 1;
+        } else if (selected == "car") {
+          totPoints += 0;
+          pointsPerQ = 0;
+        } else if (selected == "bike") {
+          totPoints += 2;
+          pointsPerQ = 2;
+        } else if (selected == "walk") {
+          totPoints += 3;
+          pointsPerQ = 3;
+        }
+        idQuestion2.innerHTML = "You have earned " + pointsPerQ + " points.";
+      }
+      function evaluateQuestion3() {
+        var selected = document.getElementById("idToPlace3").value;
+        if (selected == "trainwalk") {
+          totPoints += 3;
+          pointsPerQ = 3;
+        } else if (selected == "traincar") {
+          totPoints += 0;
+          pointsPerQ = 0;
+        } else if (selected == "car") {
+          totPoints += 0;
+          pointsPerQ = 0;
+        } else if (selected == "carwalk") {
+          totPoints += 2;
+          pointsPerQ = 2;
+        }
+        idQuestion3.innerHTML = "You have earned " + pointsPerQ + " points.";
+        function evaluateQuestion4() {
+          var selected = document.getElementById("idToPlace4").value;
+          if (selected == "train") {
+            totPoints += 1;
+            pointsPerQ = 1;
+          } else if (selected == "car") {
+            totPoints += 2;
+            pointsPerQ = 2;
+          } else if (selected == "carpool") {
+            totPoints += 3;
+            pointsPerQ = 3;
+          } else if (selected == "bike") {
+            totPoints += 0;
+            pointsPerQ = 0;
+          }
+          idQuestion4.innerHTML = "You have earned " + pointsPerQ + " points.";
+        }
+        function evaluateQuestion5() {
+          var selected = document.getElementById("idToPlace5").value;
+          if (selected == "train") {
+            totPoints += 3;
+            pointsPerQ = 3;
+          } else if (selected == "car") {
+            totPoints += 1;
+            pointsPerQ = 1;
+          } else if (selected == "carpool") {
+            totPpoints += 2;
+            pointsPerQ = 2;
+          } else if (selected == "bike") {
+            totPoints += 0;
+            pointsPerQ = 0;
+          }
+          idQuestion5.innerHTML = "You have earned " + pointsPerQ + " points.";
+          idResult.innerHTML = "Did you pass?"
+          idPoints.innerHTML = totPoints + "/15";
+          if (totPoints >= 12) {
+            idResult.innerHTML = "You passed this level!";
+          } else if (totPoints >= 9) {
+            idResult.innerHTML = "You passed this level, but try to be more conscious of your decisions.";
+          } else {
+            idResult.innerHTML = "You didn't make enough environmentally friendly choices; try again.";
+          }
+        }
+      } 
+    </script>
+
+    <body>
+        <div id="idQuestion1">You are going to work downtown from your home in the suburbs<br>
+            <select id="idToPlace1">
+                <option value="train">Train</option>
+                <option value="car">Car</option>
+                <option value="carpool">Carpool</option>
+                <option value="bike">Bike</option>
+            </select>
+            <input type="button" value="Submit" onClick="evaluateQuestion1()">
+        </div>
+        <br>
+        <div id="idQuestion2">You are at the Willis Tower and going to Lou Malnati's<br>
+            <select id="idToPlace2">
+                <option value="train">Train (17 minutes) </option>
+                <option value="car">Car (9 minutes)</option>
+                <option value="bike">Bike (11 minutes)</option>
+                <option value="walk">Walk (27 minutes)</option>
+            </select>
+            <input type="button" value="Submit" onClick="evaluateQuestion2()">
+        </div>
+        <br> 
+        <div id="idQuestion3">You and a friend go to Chicago then go to Navy Pier<br>
+            <select id="idToPlace3">
+                <option value="trainwalk">Train + Walk</option>
+                <option value="traincar">Train + Car Rental</option>
+                <option value="car">Car</option>
+                <option value="carwalk">Car + Walk</option>
+            </select>
+            <input type="button" value="Submit" onClick="evaluateQuestion3()">
+        </div>
+        <br> 
+        <div id="idQuestion4">You and your friend are going to another friend's apartment on the outskirts of the city<br>
+            <select id="idToPlace4">
+                <option value="train">Train</option>
+                <option value="car">Car</option>
+                <option value="carpool">Carpool</option>
+                <option value="bike">Bike</option>
+            </select>
+            <input type="button" value="Submit" onClick="evaluateQuestion4()">
+        </div>
+        <br>
+        <div id="idQuestion5">You and your friend are going back home after spending the night on the Riverwalk<br>
+            <select id="idToPlace5">
+                <option value="train">Train</option>
+                <option value="car">Car</option>
+                <option value="carpool">Carpool</option>
+                <option value="bike">Bike</option>
+            </select>
+            <input type="button" value="Submit" onClick="evaluateQuestion5()">
+        </div>
+        <div id="idResultQuestion"></div>
+        <div id="idPoints"></div>
+        <div id="idResult"></div>
+    </body>
+</html>

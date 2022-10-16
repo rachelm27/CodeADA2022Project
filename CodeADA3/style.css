@@ -1,0 +1,80 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  color: black;
+  background-color: #f6f4f4;
+  font-family: 'Nunito';
+  text-align: center;
+  font-size: 20px;
+  background-image: url(background.png)
+  
+}
+h1 {
+  font-family: 'Nanum Pen Script';
+  color: #326732;
+  font-size: 48px;
+}
+h3 {
+  font-family: 'Nanum Pen Script';
+  color: #326732;
+  font-size: 30px;
+}
+
+ul li{
+  padding: 10px;
+  display: inline-block;
+  margin: 2.5px
+}
+
+ul li:hover{
+  border: 2px solid black;
+}
+span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+  .container {
+    max-width: 800px;
+    margin: auto;
+}
+  .myText {
+    position: center;
+    vertical-align: center;
+    background-color: #343434;
+    opacity: 0.7;
+    height: 140px;
+    width: 800px;
+    padding: 20px;
+    color: #fff;
+    overflow: auto;
+    margin: 10px;
+    border-radius: 25px;
+    
+    }
+  .mapael .map {
+      position: relative;
+  }  
+  .mapael .mapTooltip {
+    position: absolute;
+    background-color: #343434;
+    opacity: 0.70;
+    filter: alpha(opacity=70);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 1000;
+    max-width: 100px;
+    display: none;
+    color: #fff;
+}
+.button {
+  background-color: white;
+  color:black;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+}
