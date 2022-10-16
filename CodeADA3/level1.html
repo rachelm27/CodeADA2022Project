@@ -17,101 +17,107 @@
 
     <script>
       var totPoints = 0;
-      var pointsPerQ = 0;
-      function evaluateQuestion1() {
-        var selected = document.getElementById("idToPlace1").value;
-        if (selected == "train") {
-          totPoints += 3;
-          pointsPerQ = 3;
-        } else if (selected == "car") {
-          totPoints += 1;
-          pointsPerQ = 1;
-        } else if (selected == "carpool") {
-          totPoints += 2;
-          pointsPerQ = 2;
-        } else if (selected == "bike") {
-          totPoints += 0;
-          pointsPerQ = 0;
-        }
-        idQuestion1.innerHTML = "You have earned " + pointsPerQ + " points.";
-      }
-      function evaluateQuestion2() {
-        var selected = document.getElementById("idToPlace2").value;
-        if (selected == "train") {
-          totPoints += 1;
-          pointsPerQ = 1;
-        } else if (selected == "car") {
-          totPoints += 0;
-          pointsPerQ = 0;
-        } else if (selected == "bike") {
-          totPoints += 2;
-          pointsPerQ = 2;
-        } else if (selected == "walk") {
-          totPoints += 3;
-          pointsPerQ = 3;
-        }
-        idQuestion2.innerHTML = "You have earned " + pointsPerQ + " points.";
-      }
-      function evaluateQuestion3() {
-        var selected = document.getElementById("idToPlace3").value;
-        if (selected == "trainwalk") {
-          totPoints += 3;
-          pointsPerQ = 3;
-        } else if (selected == "traincar") {
-          totPoints += 0;
-          pointsPerQ = 0;
-        } else if (selected == "car") {
-          totPoints += 0;
-          pointsPerQ = 0;
-        } else if (selected == "carwalk") {
-          totPoints += 2;
-          pointsPerQ = 2;
-        }
-        idQuestion3.innerHTML = "You have earned " + pointsPerQ + " points.";
-        function evaluateQuestion4() {
-          var selected = document.getElementById("idToPlace4").value;
-          if (selected == "train") {
-            totPoints += 1;
-            pointsPerQ = 1;
-          } else if (selected == "car") {
-            totPoints += 2;
-            pointsPerQ = 2;
-          } else if (selected == "carpool") {
-            totPoints += 3;
-            pointsPerQ = 3;
-          } else if (selected == "bike") {
-            totPoints += 0;
-            pointsPerQ = 0;
-          }
-          idQuestion4.innerHTML = "You have earned " + pointsPerQ + " points.";
-        }
-        function evaluateQuestion5() {
-          var selected = document.getElementById("idToPlace5").value;
-          if (selected == "train") {
-            totPoints += 3;
-            pointsPerQ = 3;
-          } else if (selected == "car") {
-            totPoints += 1;
-            pointsPerQ = 1;
-          } else if (selected == "carpool") {
-            totPpoints += 2;
-            pointsPerQ = 2;
-          } else if (selected == "bike") {
-            totPoints += 0;
-            pointsPerQ = 0;
-          }
-          idQuestion5.innerHTML = "You have earned " + pointsPerQ + " points.";
-          idResult.innerHTML = "Did you pass?"
-          idPoints.innerHTML = totPoints + "/15";
-          if (totPoints >= 12) {
-            idResult.innerHTML = "You passed this level!";
-          } else if (totPoints >= 9) {
-            idResult.innerHTML = "You passed this level, but try to be more conscious of your decisions.";
-          } else {
-            idResult.innerHTML = "You didn't make enough environmentally friendly choices; try again.";
-          }
-        }
-      } 
+            var pointsPerQ = 0;
+            function evaluateQuestion1() {
+                var selected = document.getElementById("idToPlace1").value;
+                if (selected == "train") {
+                totPoints += 3;
+                pointsPerQ = 3;
+                } else if (selected == "car") {
+                totPoints += 1;
+                pointsPerQ = 1;
+                } else if (selected == "carpool") {
+                totPoints += 2;
+                pointsPerQ = 2;
+                } else if (selected == "bike") {
+                totPoints += 0;
+                pointsPerQ = 0;
+                }
+                idQuestion1.innerHTML = "You have earned " + pointsPerQ + " points.";
+            }
+            
+            function evaluateQuestion2() {
+                var selected = document.getElementById("idToPlace2").value;
+                if (selected == "train") {
+                totPoints += 1;
+                pointsPerQ = 1;
+                } else if (selected == "car") {
+                totPoints += 0;
+                pointsPerQ = 0;
+                } else if (selected == "bike") {
+                totPoints += 2;
+                pointsPerQ = 2;
+                } else if (selected == "walk") {
+                totPoints += 3;
+                pointsPerQ = 3;
+                }
+                idQuestion2.innerHTML = "You have earned " + pointsPerQ + " points.";
+            }
+    
+            function evaluateQuestion3() {
+                var selected = document.getElementById("idToPlace3").value;
+                if (selected == "trainwalk") {
+                totPoints += 3;
+                pointsPerQ = 3;
+                } else if (selected == "traincar") {
+                totPoints += 0;
+                pointsPerQ = 0;
+                } else if (selected == "car") {
+                totPoints += 0;
+                pointsPerQ = 0;
+                } else if (selected == "carwalk") {
+                totPoints += 2;
+                pointsPerQ = 2;
+                }
+                idQuestion3.innerHTML = "You have earned " + pointsPerQ + " points.";
+            }
+                
+                function evaluateQuestion4() {
+                var selected = document.getElementById("idToPlace4").value;
+                if (selected == "train") {
+                    totPoints += 1;
+                    pointsPerQ = 1;
+                } else if (selected == "car") {
+                    totPoints += 2;
+                    pointsPerQ = 2;
+                } else if (selected == "carpool") {
+                    totPoints += 3;
+                    pointsPerQ = 3;
+                } else if (selected == "bike") {
+                    totPoints += 0;
+                    pointsPerQ = 0;
+                }
+                idQuestion4.innerHTML = "You have earned " + pointsPerQ + " points.";
+                }
+    
+                function evaluateQuestion5() {
+                    var selected = document.getElementById("idToPlace5").value;
+                    if (selected == "train") {
+                        totPoints += 3;
+                        pointsPerQ = 3;
+                    } else if (selected == "car") {
+                        totPoints += 1;
+                        pointsPerQ = 1;
+                    } else if (selected == "carpool") {
+                        totPpoints += 2;
+                        pointsPerQ = 2;
+                    } else if (selected == "bike") {
+                        totPoints += 0;
+                        pointsPerQ = 0;
+                    }
+                    idQuestion5.innerHTML = "You have earned " + pointsPerQ + " points.";
+                    
+                    idResult.innerHTML = "Did you pass?";
+                    idPoints.innerHTML = totPoints + "/15";
+                    if (totPoints >= 12) {
+                        idResult.innerHTML = "You passed this level!";
+                    } else if (totPoints >= 9) {
+                        idResult.innerHTML = "You passed this level, but try to be more conscious of your decisions.";
+                    } else {
+                        idResult.innerHTML = "You didn't make enough environmentally friendly choices; try again.";
+                    }
+                }
+    
     </script>
 
     <body>
