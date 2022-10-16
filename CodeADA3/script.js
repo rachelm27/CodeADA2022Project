@@ -41,11 +41,11 @@ $(".container").mapael({
                 if (typeof elemOptions.myText != 'undefined') {
                     $('.myText span').html(elemOptions.myText).css({display: 'none'}).fadeIn('slow');
                 } 
-                console.log("hiiii")
+                //console.log("hiiii")
             },
             mouseout: function (e, id, mapElem, textElem, elemOptions) {
                 $('.myText span').html(instructionsTxt).css({display: 'none'}).fadeIn('slow');
-                console.log("byeeee")
+                //console.log("byeeee")
             },
         }
     }
